@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		
+		function Person() {
+
+		}
+
+		Person.prototype.name = "Volong";
+		Person.prototype.age = 29;
+		Person.prototype.job = "Software Engineer";
+		Person.prototype.sayName = function() {
+			alert(this.name);
+		}
+
+		var keys = Object.keys(Person.prototype);
+		alert(keys); // name,age,job,sayName
+
+		var p1 = new Person();
+		p1.name = "yihailong";
+		p1.age = 18;
+		var p1Keys = Object.keys(p1);
+		alert(p1Keys); // name,age
+
+		var keys = Object.getOwnPropertyNames(Person.prototype);
+		alert(keys); // constructor,name,age,job,sayName
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

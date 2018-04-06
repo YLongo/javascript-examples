@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function Person() {
+
+		}
+
+		Person.prototype.name = "Volong";
+		Person.prototype.age = 29;
+		Person.prototype.job = "Software Engineer";
+		Person.prototype.sayName = function() {
+			alert(this.name);
+		}
+
+		var person1 = new Person();
+		person1.sayName();
+
+		var person2 = new Person();
+		person2.sayName();
+
+		alert(person1.sayName == person2.sayName);
+
+		alert(Person.prototype.constructor == Person);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

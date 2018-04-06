@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function Person() {
+
+		}
+
+		Person.prototype.name = "Volong";
+		Person.prototype.age = 29;
+		Person.prototype.job = "Sorftware Engineer";
+		Person.prototype.sayName = function() {
+			alert(this.name);
+		}
+
+		var person1 = new Person();
+		var person2 = new Person();
+
+		// alert(person1.hasOwnProperty("name"));
+
+		alert("name" in person1);
+		person1.name = "yihailong";
+		alert("name" in person1);
+		alert("name" in person2);
+
+		// alert(person1.name); // "yihailong" - 来自实例
+
+		// alert(person1.hasOwnProperty("name"));
+
+		// alert(person2.name); // "Volong" - 来自原型
+
+		// alert(person2.hasOwnProperty("name"));
+		delete person1.name;
+		alert("name" in person1);
+
+		// alert(person1.name); // "Volong" - 来自原型
+		// alert(person1.hasOwnProperty("name"));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
