@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <title>浏览器端JS代码测试</title>
+  <script type="module">
+    // 导入单个标识符
+    import { value } from './03-moduleFile.js';
+    console.log(value); // 输出：10
+
+    // 导入多个标识符
+    import { add_10, multiply_10 } from './03-moduleFile.js';
+    console.log(add_10(5));      // 输出：15
+    console.log(multiply_10(5)); // 输出：50
+
+    // 在导入时对标识符进行重命名
+    import { str as name } from './03-moduleFile.js';
+    console.log(name);// 输出：owlman
+  </script>
+</head>
+
+<body>
+  <h2>浏览器端的JavaScript</h2>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>浏览器端JS代码测试</title>
+    <script type="module">
+        console.log("浏览器为: " + navigator.appName)
+        console.log("浏览器版本为: " + navigator.appVersion)
+        console.log("浏览器语言为: " + navigator.language)
+        console.log("浏览器user-agent: " + navigator.userAgent)
+        console.log("是否启用了cookie: " + navigator.cookieEnabled)
+        console.log("浏览器是否启用了java" + navigator.javaEnabled())
+        console.log("浏览器是否启用了定位: " + navigator.geolocation);
+        console.log("浏览器安装了以下插件: ");
+        for (const plugin of navigator.plugins) {
+            console.log("插件名称:", plugin.name);
+            // console.log("插件描述:", plugin.description);
+            // console.log("插件版本:", plugin.version);
+            // console.log("插件文件名:", plugin.filename);
+            // console.log("插件长度:", plugin.length);
+        }
+    </script>
+</head>
+
+<body>
+    <h2>浏览器端的JavaScript</h2>
+</body>
+
+</html>

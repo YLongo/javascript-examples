@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>浏览器端JS代码测试</title>
+
+    <script type="module">
+
+        import { ajax_get, ajax_post } from './ajax.js';
+        ajax_get("./hero.json", function (data) {
+            console.log(typeof data)
+            console.log(data);
+
+            console.log("------------------");
+
+            let hero = JSON.parse(data);
+            console.log(typeof hero);
+            for (const item of hero) {
+                console.log(item.name + ":" + item.age);
+            }
+
+            hero = JSON.parse(data, function(key, value) {
+                if (key == 'age') {
+                    return undefined
+                } 
+                return value;
+            });
+            for (const item of hero) {
+                console.log(item.name + ":" + item.age)
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+    <h2>浏览器端的JavaScript</h2>
+</body>
+
+</html>

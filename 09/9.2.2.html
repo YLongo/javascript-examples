@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='zh-cn'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>测试页</title>
+</head>
+
+<body>
+    <h2>测试页</h2>
+    <div id="box">
+        <input type="button" value="先打声招呼" id="sayHello">
+    </div>
+    <script>
+        const btn = document.querySelector('#sayHello');
+        const div = document.querySelector('#box');
+        const eventFunc = function (event) {
+            // 点击事件触发时，btn的target与currentTarget是一致的
+            // div的target是btn，currentTarget是div
+            console.log('事件目标是：', event.target);
+            console.log('处理事件的是：', event.currentTarget);
+            // 可以阻止事件传播
+            // event.stopPropagation();
+        };
+        // false表示在冒泡阶段处理事件
+        btn.addEventListener('click', eventFunc, false);
+        div.addEventListener('click', eventFunc, true);
+    </script>
+</body>
+
+</html>
