@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+</head>
+
+<body>
+    <h2>Home</h2>
+    <form action="/login" method="POST">
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="name" /></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="pword" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" /></td>
+                <td><input type="reset" /></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

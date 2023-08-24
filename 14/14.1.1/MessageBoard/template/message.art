@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script defer="defer" src="/public/script/message.js"></script>
+    <title>Document</title>
+</head>
+<body>    
+    <h1>My First Heading</h1>
+    <form action='/sendMessage' method='POST' id="messageForm">
+        <table>
+            <tr>
+                <td>name</td>
+                <td><input type='text' name='name' id="name"></td>
+            </tr>
+            <tr>
+                <td>message</td>
+                <td><textarea name='message' id="message"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" /></td>
+                <td><input type="reset" /></td>
+            </tr>
+        </table>
+    </form>
+
+    <div>
+        <h2>Messages</h2>
+        <table>
+            {{ each data }}
+            <tr>
+                <td>{{ $value.user }}</td>
+                <td>{{ $value.message }}</td>
+            </tr>
+            {{ /each }}
+        </table>
+    </div>
+</body>
+</html>
