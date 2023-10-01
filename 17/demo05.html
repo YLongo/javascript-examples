@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo05</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        const getJSON = function (url) {
+            const promise = new Promise(function (resolve, reject) {
+                const handler = function () {
+                    if (this.readyState !== 4) {
+                        return;
+                    }
+                    if (this.status === 200) {
+                        resolve(this.response);
+                    } else {
+                        reject(new Error(this.statusText));
+                    }
+                };
+                const client = new XMLHttpRequest();
+                client.open("GET", url);
+                client.onreadystatechange = handler;
+                client.responseType = 'json';
+                client.setRequestHeader("Accept", "application/json");
+                client.send();
+            });
+
+            return promise;
+        };
+
+        getJSON("https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty")
+            .then(function (json) {
+            console.log("Contents: " + JSON.stringify(json));
+            console.log('title', json.title);
+            document.getElementById('title').innerHTML = json.title;
+            document.getElementById('url').innerHTML = json.url;
+            // parse json.time to human readable time
+            var date = new Date(json.time * 1000);
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDate();
+            var hour = date.getHours() + 8;
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+            var time = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+            document.getElementById('time').innerHTML = time;
+            document.getElementById('by').innerHTML = json.by;
+        }, function (error) {
+            console.log('出错了', error);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="by"></div>
+    <div id="title"></div>
+    <div id="url"></div>
+    <div id="time"></div>
+
+</body>
+
+</html>

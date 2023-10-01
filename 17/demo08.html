@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo05</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        const someAsyncThing = function () {
+            return new Promise(function (resolve, reject) {
+                resolve(x + 2);
+            });
+        };
+
+        someAsyncThing().then(function () {
+            console.log('everything is great');
+        });
+
+        setTimeout(() => {console.log(123)}, 2000);
+
+
+    </script>
+
+</head>
+
+<body>
+<div id="by"></div>
+<div id="title"></div>
+<div id="url"></div>
+<div id="time"></div>
+
+</body>
+
+</html>

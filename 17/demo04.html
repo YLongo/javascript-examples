@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo04</title>
+    <script type="text/javascript">
+        function loadImageAsync(url) {
+            return new Promise(function (resolve, reject) {
+                const image = new Image();
+                image.onload = function () {
+                    resolve(image);
+                };
+
+                image.onerror = function () {
+                    reject(new Error('could not load image at ' + url));
+                };
+
+                image.src = url;
+            })
+        }
+
+        const url = 'https://www.baidu.com/img/bd_logo1.png';
+        loadImageAsync(url).then(function (image) {
+            document.getElementById('img').src = image.src;
+        }, function (error) {
+            console.log(error);
+        });
+    </script>
+</head>
+<body>
+    <img id="img" src="">
+</body>
+
+</html>

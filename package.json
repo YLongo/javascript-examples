@@ -1,0 +1,10 @@
+{
+  "name": "javascript-examples",
+  "version": "1.0.0",
+  "dependencies": {
+    "co": "^4.6.0",
+    "fs-readfile-promise": "^3.0.1",
+    "node-fetch": "^3.3.2",
+    "thunkify": "^2.1.2"
+  }
+}

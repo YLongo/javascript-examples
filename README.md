@@ -1,0 +1,1 @@
+[ES6 入门教程](https://wangdoc.com/es6/promise)

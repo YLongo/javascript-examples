@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>demo05</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+
+        let str = 'hello';
+        for (let a of str) {
+            console.log(a);
+        }
+
+        let paras = document.querySelectorAll('p');
+        for (let p of paras) {
+            console.log("pppp", p);
+        }
+
+        // arguments对象
+        function printArgs() {
+            for (let x of arguments) {
+                console.log(x)
+            }
+        }
+
+        printArgs('a', 'b');
+
+    </script>
+
+</head>
+
+<body>
+<p id="by">x</p>
+<p id="title">y</p>
+<p id="url">z</p>
+<p id="time">c</p>
+
+</body>
+
+</html>
