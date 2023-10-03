@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="react.js"></script>
+    <script src="react-dom.js"></script>
+    <script src="babel.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+  class MyTitle extends React.Component {
+    _default_text = 'World';
+    constructor(...args) {
+      super(...args);
+      this.state = {
+        text: this._default_text,
+        isClicked: false,
+      };
+    }
+
+    handleClick() {
+      const d = new Date();
+      const year = d.getFullYear() // 当前年份
+      const month = d.getMonth() + 1 // 当前月份
+      const date = d.getDate() // 当前是每个月的几号
+      this.setState({
+        text: this.state.isClicked ? this._default_text : `${year}年${month}月${date}日`,
+        isClicked: !this.state.isClicked,
+      });
+    }
+
+    render() {
+      return <h1 onClick={this.handleClick.bind(this)}>
+        {'Hello ' + this.state.text}
+      </h1>;
+    }
+  };
+
+  ReactDOM.render(
+    <MyTitle/>,
+    document.getElementById('example')
+  );
+    </script>
+  </body>
+</html>
