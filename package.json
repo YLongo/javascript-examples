@@ -1,0 +1,25 @@
+{
+  "name": "javascript-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YLongo/javascript-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YLongo/javascript-examples/issues"
+  },
+  "homepage": "https://github.com/YLongo/javascript-examples#readme",
+  "dependencies": {
+    "feedparser": "^2.2.10",
+    "rss-parser": "^3.13.0",
+    "rsshub": "^1.0.0-master.67d4a7e"
+  }
+}
