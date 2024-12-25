@@ -1,6 +1,11 @@
 h1 {
     color: #2f4f4f;
     margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.title {
+    font: 32px Helvetica, Arial, sans-serif;
 }
 
 .nav {
@@ -16,11 +21,29 @@ h1 {
 .nav a {
     color: white;
     background-color: #13a4a4;
-    padding: 5px;
+    padding: 5px 15px;
     border-radius: 2px;
     text-decoration: none;
 }
 
 .nav .featured {
     background-color: orange;
+    box-shadow: 10px 2px #6f9090;
+}
+
+a:link {
+    color: blue;
+}
+
+.footer {
+    color: #666;
+    background-color: #ccc;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer a {
+    color: initial;
+    text-decoration: underline;
 }

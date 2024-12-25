@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+
+    <style>
+
+        :root {
+            box-sizing: border-box;
+        }
+
+        *, ::before, ::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            background-color: #eee;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        header {
+            padding: 1em 1.5em;
+            color: #fff;
+            background-color: #0072b0;
+            border-radius: .5em;
+        }
+
+        main {
+            display: block;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .main {
+            width: 70%;
+            padding: 1em 1.5em;
+            background-color: #fff;
+            border-radius: .5em;
+        }
+
+        .sidebar {
+            width: 30%;
+            padding: 1.5em;
+            margin-top: 0;
+            margin-left: 1.5em;
+            background-color: #fff;
+            border-radius: .5em;
+        }
+
+        .button-link {
+            display: block;
+            padding: 0.5em;
+            color: #fff;
+            background-color: #0090C9;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .button-link + .button-link {
+            margin-top: 1.5em;
+        }
+
+        .sponsor-link {
+            display: block;
+            color: #0072b0;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        body * + * {
+            margin-top: 1.5em;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Franklin Running Clud</h1>
+</header>
+
+<div class="container">
+    <main class="main">
+        <h2>Come join us</h2>
+        <div>
+            <p>
+                the Franklin Running Club meets every Saturday morning at 9:00am at the
+                Franklin Mall for a 5k run. All levels of runners are welcome, and we also
+            </p>
+        </div>
+    </main>
+    <aside class="sidebar">
+        <a href="/twitter" class="button-link">
+            follow us on twitter
+        </a>
+        <a href="/fackbook" class="button-link">
+            like us on pacebook
+        </a>
+        <a href="/sponsors" class="sponsor-link">
+            become a sponsor
+        </a>
+    </aside>
+</div>
+</body>
