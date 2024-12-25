@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Bootstrap Button</h1>
+
+    <!-- 我看不出这个玩意的作用是啥 -->
+    <h2>data toggle button</h2>
+    <button type="button" class="btn" data-toggle="button">Button</button>
+    <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+        Single toggle
+    </button>
+    <button type="button" class="btn btn-primary" >
+        Single toggle
+    </button>
+
+    <h2>data toggle buttons</h2>
+    <!-- 有啥叼用, 复选框都不见了 -->
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-success active">
+            <input type="checkbox" name="options"/> Option 1
+        </label>
+        <br>
+        <label class="btn btn-primary">
+            <input type="checkbox" name="options"/> Option 2
+        </label>
+        <br>
+        <label class="btn btn-primary">
+            <input type="checkbox" name="options"/> Option 3
+        </label>
+    </div>
+
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+            <input type="radio" name="options"> Option 1
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options"> Option 2
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options"> Option 3
+        </label>
+    </div>
+</body>
+
+</html>
