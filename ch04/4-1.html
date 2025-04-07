@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <style>
+
+        :root {
+            box-sizing: border-box;
+        }
+
+        *, ::before, ::after {
+            box-sizing: inherit;
+        }
+
+        body {
+            background-color: #eee;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        body * + * {
+            margin-top: 1.5em;
+        }
+
+        header {
+            padding: 1em 1.5em;
+            color: #fff;
+            background-color: #0072b0;
+            border-radius: .5em;
+            margin-bottom: 1.5em;
+        }
+
+        .main {
+            padding: 0 1.5em;
+            background-color: #fff;
+            border-radius: .5em;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .media {
+            float: left;
+            width: 50%;
+            padding: 1.5em;
+            background-color: orange;
+            border-radius: .5em;
+        }
+
+        .clearfix::after {
+            display: block;
+            content: " ";
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Franklin Running Clud</h1>
+        </header>
+        <main class="main clearfix">
+            <h2>Running Tips</h2>
+
+            <div>
+                <div class="media">
+                    <img src="runner.png" alt="" class="media-image">
+                    <div class="media-body">
+                        <h4>Stength</h4>
+                        <p>
+                            Strength training is important for runners. It helps to improve your
+                            overall fitness and can prevent injuries.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="media">
+                    <img src="shoes.png" alt="" class="media-image">
+                    <div class="media-body">
+                        <h4>Cadence</h4>
+                        <p>
+                            Running at the right cadence can help to improve your overall fitness
+                            and can prevent injuries.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="media">
+                    <img src="shoes.png" alt="" class="media-image">
+                    <div class="media-body">
+                        <h4>Change is up</h4>
+                        <p>
+                            Don't run in the same place every time. Change your route every week.
+                            Change your pace.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="media">
+                    <img src="runner.png" alt="" class="media-image">
+                    <div class="media-body">
+                        <h4>Focus on form</h4>
+                        <p>
+                            Run tall but relaxed. Your feet should hit the ground beneath your
+                            hips, not your toes.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- <div style="clear: both"></div> -->
+        </main>
+    </div>
+
+</body>
+</html>
