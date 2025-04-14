@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-size: 12px;
+        }
+
+        ul {
+            background: #ddd;
+            margin: 15px 15px 15px 15px;
+            padding: 5px 5px 5px 5px;
+        }
+
+        li {
+            color: black;
+            background: #aaa;
+            margin: 20px 20px 20px 20px;
+            padding: 10px 0 10px 10px;
+            list-style: none;
+        }
+
+        li.withborder {
+            border-style: dashed;
+            border-width: 5px;
+            border-color: black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<!--
+a. 15px
+b. 25px
+c. 5px
+d. 10px
+e.
+f. 5px
+g. 25px
+h. 15px
+
+i. 15px
+j. 25px
+k. 12 + 10 * 2 = 32px
+l. 20px
+m. 5px
+n. 12 * 2 + 10 * 2 = 44px
+o. 5px
+p. 20 + 5 = 25px
+q. 15px
+r. 20 + 5 = 25px
+s. 12 + 10 * 2 = 32px
+t. 20px
+u. 5px
+v. 12 * 2 + 10 * 2 = 44px
+w. 5px
+x. 20 + 5 = 25px
+-->
+<body>
+    <ul>
+        <li>第1个列表的第1个项目内容</li>
+        <li class="withborder">第1个列表的第2个项目内容，内容更长一些，目的是演示自动折行的效果。</li>
+    </ul>
+    <ul>
+        <li>第2个列表的第1个项目内容</li>
+        <li class="withborder">第2个列表的第2个项目内容，内容更长一些，目的是演示自动折行的效果。</li>
+    </ul>
+</body>
+</html>

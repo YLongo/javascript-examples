@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+
+    <style>
+        div {
+            background-color: #a2d2ff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 这两个div之间的距离为50px -->
+    <!-- 因为margin塌陷, 所以这两个div之间的距离为最大margin的值 -->
+
+    <div style="margin-bottom: 50px">
+        这是一个div1标记
+    </div>
+    <div style="margin-top: 30px">
+        这是一个div2标记
+    </div>
+
+</body>
+</html>
