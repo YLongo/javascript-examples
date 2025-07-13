@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+
+    <style>
+        .grid {
+            /* 将元素设置为网格容器 */
+            display: grid;
+            /* 定义等宽的三列 */
+            grid-template-columns: 1fr 1fr 1fr;
+            /* 定义等高的两行 */
+            grid-template-rows: 1fr 1fr;
+            /* 给每个网格的单元格之间加上间隔 */
+            grid-gap: 0.5em 3em;
+        }
+
+        .grid > * {
+            background-color: darkgray;
+            color: white;
+            padding: 2em;
+            border-radius: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="a">a</div>
+        <div class="b">b</div>
+        <div class="c">c</div>
+        <div class="d">d</div>
+        <div class="e">e</div>
+        <div class="f">f</div>
+    </div>
+</body>
+</html>
